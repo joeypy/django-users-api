@@ -1,7 +1,10 @@
 from django.contrib import admin
-from profiles_api.models import UserProfile
+from profiles_api import models
 # Register your models here.
 
-@admin.register(UserProfile)
+@admin.register(models.UserProfile)
 class ProfileApiAdmin(admin.ModelAdmin):
+  pass
+@admin.register(models.ProfileFeedItem)
+class ProfileFeedItemAdmin(admin.ModelAdmin):
   pass
